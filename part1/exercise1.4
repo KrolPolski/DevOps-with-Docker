@@ -1,0 +1,5 @@
+docker run -d -it --name Curly ubuntu sh -c 'while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website; done'
+docker attach Curly
+docker exec -it Curly bash
+root@a02bc5129b33:/# apt-get update
+root@a02bc5129b33:/# apt-get install curl
