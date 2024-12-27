@@ -1,0 +1,20 @@
+% docker image ls 
+REPOSITORY                          TAG               IMAGE ID       CREATED        SIZE
+devopsdockeruh/simple-web-service   ubuntu            4e3362e907d5   3 years ago    83MB
+devopsdockeruh/simple-web-service   alpine            fd312adc88e0   3 years ago    15.7MB
+
+% docker run fd312adc88e0 
+Starting log output
+Wrote text to /usr/src/app/text.log
+Wrote text to /usr/src/app/text.log
+...
+ % docker exec -it loving_engelbart sh  
+/usr/src/app # ls
+server    text.log
+/usr/src/app # cat text.log 
+2024-12-27 11:52:46 +0000 UTC
+2024-12-27 11:52:48 +0000 UTC
+2024-12-27 11:52:50 +0000 UTC
+2024-12-27 11:52:52 +0000 UTC
+2024-12-27 11:52:54 +0000 UTC
+Secret message is: 'You can find the source code here: https://github.com/docker-hy'
