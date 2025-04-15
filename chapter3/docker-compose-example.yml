@@ -1,0 +1,7 @@
+services:
+  yt-dlp-ubuntu:
+    image: krolpolski/yt-dlp-ubuntu
+    build: .
+    volumes:
+      - ./text.log:/usr/src/app/text.log
+    container_name: yt-dlp
