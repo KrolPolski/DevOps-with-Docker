@@ -1,0 +1,17 @@
+services:
+  example-frontend:
+    build: example-frontend/.
+    ports: 
+      - 5050:5050
+    environment:
+      - REACT_APP_BACKEND_URL=http://127.0.0.1:8080/
+    working_dir: /usr/src/app
+    command: serve -s -l 5050 build
+  example-backend:
+    build: example-backend/.
+    ports:
+      - 8080:8080
+    environment: 
+      - REQUEST_ORIGIN=http://localhost:5050
+    working_dir: /usr/src/app
+    command: ./server
